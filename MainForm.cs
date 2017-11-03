@@ -262,7 +262,7 @@ namespace SharpQuake
             if (Debugger.IsAttached)
                 throw new Exception("Fatal error!", ex);
 
-            Cursor.Show();
+            Instance.CursorVisible = true;
             MessageBox.Show(ex.Message);
             SafeShutdown();
         }
